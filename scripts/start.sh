@@ -57,27 +57,27 @@ if ( nc -vz localhost 8181 >/dev/null 2>&1 ); then
 fi
 
 # Launch a browser window.
-if [ -f "/usr/bin/google-chrome" ]; then
-  echo ""
-  echo "  INFORMATION"
-  echo "  Setting up a local development server at localhost:8181. Opening a"
-  echo "  Chrome browser window pointing to this server."
-  echo ""
-  (sleep 5; /usr/bin/google-chrome http://localhost:8181/ )&
-elif [ -e /Applications/Google\ Chrome.app ]; then
-  echo ""
-  echo "  INFORMATION"
-  echo "  Setting up a local development server at localhost:8181. Opening a"
-  echo "  Chrome browser window pointing to this server."
-  echo ""
-  (sleep 5; open /Applications/Google\ Chrome.app http://localhost:8181/ )&
-else
-  echo ""
-  echo "  INFORMATION"
-  echo "  Setting up a local development server. You can access this server"
-  echo "  by navigating to localhost:8181 in a browser window."
-  echo ""
-fi
+# if [ -f "/usr/bin/google-chrome" ]; then
+#   echo ""
+#   echo "  INFORMATION"
+#   echo "  Setting up a local development server at localhost:8181. Opening a"
+#   echo "  Chrome browser window pointing to this server."
+#   echo ""
+#   (sleep 5; /usr/bin/google-chrome http://localhost:8181/ )&
+# elif [ -e /Applications/Google\ Chrome.app ]; then
+#   echo ""
+#   echo "  INFORMATION"
+#   echo "  Setting up a local development server at localhost:8181. Opening a"
+#   echo "  Chrome browser window pointing to this server."
+#   echo ""
+#   (sleep 5; open /Applications/Google\ Chrome.app http://localhost:8181/ )&
+# else
+#   echo ""
+#   echo "  INFORMATION"
+#   echo "  Setting up a local development server. You can access this server"
+#   echo "  by navigating to localhost:8181 in a browser window."
+#   echo ""
+# fi
 
 # Argument passed to dev_appserver.py to indicate whether or not to
 # clear the datastore.
