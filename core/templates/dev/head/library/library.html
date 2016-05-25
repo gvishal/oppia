@@ -151,6 +151,40 @@
   {% include 'components/search_results_directive.html' %}
 {% endblock %}
 
+  {%block base_js%}
+    {% include 'directives.html' %}
+    {% include 'forms/form_builder_templates.html' %}
+    {% include 'footer_js_libs.html' %}
+    {% include 'components/exploration_summary_tile_directive.html' %}
+    {% include 'components/rating_display.html' %}
+    {% include 'components/create_exploration_button_directive.html' %}
+    {% include 'components/activity_tiles_infinity_grid_directive.html' %}
+
+    <script>
+      {{ include_js_file('app.js') }}
+      {{ include_js_file('base.js') }}
+      {{ include_js_file('filters.js') }}
+
+      {{ include_js_file('forms/formBuilder.js') }}
+
+      {{ include_js_file('services/alertsService.js') }}
+      {{ include_js_file('services/explorationContextService.js') }}
+
+      {{ include_js_file('services/searchService.js') }}
+
+      {{ include_js_file('components/ActivityTilesInfinityGridDirective.js') }}
+      {{ include_js_file('components/AlertMessageDirective.js') }}
+      {{ include_js_file('components/CreateExplorationButtonDirective.js') }}
+      {{ include_js_file('components/ExplorationCreationButtonService.js') }}
+      {{ include_js_file('components/ExplorationSummaryTileDirective.js') }}
+
+      {{ include_js_file('components/RatingComputationService.js')}}
+      {{ include_js_file('components/RatingDisplayDirective.js')}}
+
+      {{ OBJECT_EDITORS_JS }}
+    </script>
+  {% endblock base_js%}
+
 {% block footer_js %}
   {{ super() }}
   <script>
